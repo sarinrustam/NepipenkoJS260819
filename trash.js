@@ -1,16 +1,37 @@
-// Написать функцию, которая преобразует строку вида list-style-image в listStyleImage
-function camelize(str) {
-    let array = str.split("-");
-
-    for (let i = 0; i < array.length; i++) {
-        if (i === 0) continue;
-
-        array[i] = array[i].charAt(0).toUpperCase() + array[i].slice(1);
-    }
-    return array.join("");
-
+//Напишите функцию removeClass(obj, cls), которая удаляет класс cls, если он есть:
+let myObject = {
+    className: 'open menu menu'
 }
-console.log(camelize("list-style-image"));
+
+function removeClass(obj, cls) {
+    let myArray = obj.className.split(' ');
+
+    for (let i = 0; i < myArray.length; i++) {
+        if (myArray[i] === cls) {
+            myArray.splice(i, 1)
+            i--
+        }
+    }
+
+    obj.className = myArray.join(" ");
+}
+
+removeClass(myObject, "menu");
+console.log(myObject);
+
+// Написать функцию, которая преобразует строку вида list-style-image в listStyleImage
+// function camelize(str) {
+//     let array = str.split("-");
+
+//     for (let i = 0; i < array.length; i++) {
+//         if (i === 0) continue;
+
+//         array[i] = array[i].charAt(0).toUpperCase() + array[i].slice(1);
+//     }
+//     return array.join("");
+
+// }
+// console.log(camelize("list-style-image"));
 // Написать функцию, которая добавляет в массив класс class, но только если он там есть.
 // let obj = {
 //     className: 'open menu'
