@@ -1,23 +1,36 @@
-// Написать функцию, которая добавляет в массив класс class, но только если он там есть.
-let obj = {
-    className: 'open menu'
-}
+// Написать функцию, которая преобразует строку вида list-style-image в listStyleImage
+function camelize(str) {
+    let array = str.split("-");
 
-function addClass(object, cls) {
-    let objstr = object.className ? object.className.split(' ') : [];
+    for (let i = 0; i < array.length; i++) {
+        if (i === 0) continue;
 
-    for (let i = 0; i < objstr.length; i++) {
-        if (objstr[i] == cls) return;
+        array[i] = array[i].charAt(0).toUpperCase() + array[i].slice(1);
     }
-
-    objstr.push(cls);
-
-    object.className = objstr.join(' ');
+    return array.join("");
 
 }
+console.log(camelize("list-style-image"));
+// Написать функцию, которая добавляет в массив класс class, но только если он там есть.
+// let obj = {
+//     className: 'open menu'
+// }
 
-addClass(obj, "now");
-alert(obj.className);
+// function addClass(object, cls) {
+//     let objstr = object.className ? object.className.split(' ') : [];
+
+//     for (let i = 0; i < objstr.length; i++) {
+//         if (objstr[i] == cls) return;
+//     }
+
+//     objstr.push(cls);
+
+//     object.className = objstr.join(' ');
+
+// }
+
+// addClass(obj, "now");
+// alert(obj.className);
 
 
 // let numbers = [1, 3, 4, 5, 6, 7, 2, 0, 4];
