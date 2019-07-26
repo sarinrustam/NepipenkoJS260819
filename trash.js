@@ -13,6 +13,7 @@ function addClass(object, cls) {
     objstr.push(cls);
 
     object.className = objstr.join(' ');
+
 }
 
 addClass(obj, "now");
