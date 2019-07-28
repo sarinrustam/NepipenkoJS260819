@@ -1,23 +1,54 @@
+// Написать функцию, которая getWeekDay, которая выводит день недели, исходя из даты
+
+let myDate = new Date();
+
+function getMonthText(daaaate) {
+    let month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Октябрь", "Ноябрь", "Декабрь"]
+
+    return month[daaaate.getMonth()]
+}
+console.log(myDate);
+
+console.log(getMonthText(myDate));
+// //Написать функцию, которая удаляет все элементы числового массива, не входящих в условие
+// arrayNumber = [1, 3, 4, 6, 7, 2, 3, 7, 8, 9, 0, 8, 6, 5];
+
+// function filterRangeInPlace(arr, a, b) {
+
+//     for (let i = 0; i < arr.length; i++) {
+
+//         let value = arr[i]
+
+//         if (a > value || b < value) {
+//             arr.splice(i--, 1);
+
+//         }
+//     }
+// }
+// filterRangeInPlace(arrayNumber, 2, 5);
+// console.log(arrayNumber);
+
+
 //Напишите функцию removeClass(obj, cls), которая удаляет класс cls, если он есть:
-let myObject = {
-    className: 'open menu menu'
-}
+// let myObject = {
+//     className: 'open menu menu'
+// }
 
-function removeClass(obj, cls) {
-    let myArray = obj.className.split(' ');
+// function removeClass(obj, cls) {
+//     let myArray = obj.className.split(' ');
 
-    for (let i = 0; i < myArray.length; i++) {
-        if (myArray[i] === cls) {
-            myArray.splice(i, 1)
-            i--
-        }
-    }
+//     for (let i = 0; i < myArray.length; i++) {
+//         if (myArray[i] === cls) {
+//             myArray.splice(i, 1)
+//             i--
+//         }
+//     }
 
-    obj.className = myArray.join(" ");
-}
+//     obj.className = myArray.join(" ");
+// }
 
-removeClass(myObject, "menu");
-console.log(myObject);
+// removeClass(myObject, "menu");
+// console.log(myObject);
 
 // Написать функцию, которая преобразует строку вида list-style-image в listStyleImage
 // function camelize(str) {
