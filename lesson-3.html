@@ -12,27 +12,20 @@
         <header>Хедер</header>
         <footer>Футер</footer>
         <script>
-            let salaries = {
-                "John": 100,
-                "Pete": 3500,
-                "Mary": 300
-            };
+            function alclean(arr) {
+                let map = new Map();
 
-            function topSalaries(obj) {
-                let maxSalary = 0;
-                let maxSalaryName = " ";
-
-
-                for (let [name, salary] of Object.entries(obj)) {
-                    if (maxSalary < salary) {
-                        maxSalary = salary;
-                        maxSalaryName = name;
-                    }
+                for (let word of arr) {
+                    let sorted = word.toLowerCase().split("").sort().join("");
+                    map.set(sorted, word);
                 }
-                return maxSalaryName;
+
+                return map.values();
             }
 
-            console.log(topSalaries(salaries));
+            let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+            console.log(alclean(arr));
         </script>
     </body>
 
