@@ -1,24 +1,11 @@
-let text = document.body.insertAdjacentText('beforeend', 'Список: ');
-let ul = document.createElement('ul');
+let lis = document.body.querySelectorAll('li');
 
+for (let li of lis) {
+    let count = li.querySelectorAll('li').length;
+    if (!count) continue;
 
-document.body.append(ul);
-
-
-while (true) {
-    let data = prompt('Введите цвет радуги: ', 'Желтый');
-
-    if (!data) {
-        break;
-    }
-    let li = document.createElement('li');
-    li.textContent = data;
-    ul.append(li);
+    li.firstChild.data += ' [' + count + ']';
 }
-
-
-
-
 // Написать функцию, которая getWeekDay, которая выводит день недели, исходя из даты
 
 // let myDate = new Date();
