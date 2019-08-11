@@ -1,15 +1,36 @@
+let text = document.body.insertAdjacentText('beforeend', 'Список: ');
+let ul = document.createElement('ul');
+
+
+document.body.append(ul);
+
+
+while (true) {
+    let data = prompt('Введите цвет радуги: ', 'Желтый');
+
+    if (!data) {
+        break;
+    }
+    let li = document.createElement('li');
+    li.textContent = data;
+    ul.append(li);
+}
+
+
+
+
 // Написать функцию, которая getWeekDay, которая выводит день недели, исходя из даты
 
-let myDate = new Date();
+// let myDate = new Date();
 
-function getMonthText(daaaate) {
-    let month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Октябрь", "Ноябрь", "Декабрь"]
+// function getMonthText(daaaate) {
+//     let month = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Октябрь", "Ноябрь", "Декабрь"]
 
-    return month[daaaate.getMonth()]
-}
-console.log(myDate);
+//     return month[daaaate.getMonth()]
+// }
+// console.log(myDate);
 
-console.log(getMonthText(myDate));
+// console.log(getMonthText(myDate));
 // //Написать функцию, которая удаляет все элементы числового массива, не входящих в условие
 // arrayNumber = [1, 3, 4, 6, 7, 2, 3, 7, 8, 9, 0, 8, 6, 5];
 
