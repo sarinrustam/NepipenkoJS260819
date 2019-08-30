@@ -19,3 +19,7 @@ th:hover {
 td:hover {
     background-color: bisque;
 }
+
+.external {
+    background-color: yellow;
+}
