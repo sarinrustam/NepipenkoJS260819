@@ -1,0 +1,21 @@
+table {
+    margin: auto;
+    margin-top: 60px;
+}
+
+td,
+th {
+    border: 1px solid green
+}
+
+th {
+    cursor: pointer;
+}
+
+th:hover {
+    background: grey;
+}
+
+td:hover {
+    background-color: bisque;
+}
